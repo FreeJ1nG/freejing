@@ -35,7 +35,8 @@ const Navbar: FC = () => {
 			</button>
 			<div className="h-full hidden md:flex flex-row text-white font-semibold">
 				<button
-					onClick={() => {
+					onClick={async () => {
+						await router.push("/");
 						if (document.getElementById("about")) {
 							window.scrollTo({
 								top: 0,
@@ -48,7 +49,8 @@ const Navbar: FC = () => {
 					About
 				</button>
 				<button
-					onClick={() => {
+					onClick={async () => {
+						await router.push("/");
 						const projects: HTMLElement | null =
 							document.getElementById("projects");
 						if (projects) {
@@ -63,7 +65,8 @@ const Navbar: FC = () => {
 					Projects
 				</button>
 				<button
-					onClick={() => {
+					onClick={async () => {
+						await router.push("/");
 						const contacts: HTMLElement | null =
 							document.getElementById("contact");
 						if (contacts) {
